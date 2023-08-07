@@ -77,6 +77,8 @@ spec:
           runAsGroup: 65532
           runAsNonRoot: true
           runAsUser: 65532
+          seccompProfile:
+            type: RuntimeDefault
       - args:
         - --logtostderr
         - --secure-listen-address=:9443
@@ -103,6 +105,8 @@ spec:
           runAsGroup: 65532
           runAsNonRoot: true
           runAsUser: 65532
+          seccompProfile:
+            type: RuntimeDefault
       nodeSelector:
         kubernetes.io/os: linux
       serviceAccountName: kube-state-metrics
